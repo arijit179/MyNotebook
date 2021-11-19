@@ -29,7 +29,7 @@ const Login = (props) => {
         setCredentials({...credentials, [e.target.name]: e.target.value})
     }
     return (
-        <div className = "container mt-3">
+        <div className = "container mt-4">
             <h2  >Login to continue to iNotebook</h2>
             <form onSubmit = {handleSubmit}>
                 <div className="mb-3">

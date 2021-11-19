@@ -6,7 +6,7 @@ const Signup = (props) => {
     const [credentials, setCredentials] = useState({name: "" , email: "" , password: ""})
     const handleSubmit  = async (e)=>{
         e.preventDefault();
-        const {name , email , password} = credentials
+        const {name , email , password} = credentials;
         const response = await fetch("http://localhost:5000/api/auth/createuser",
       {
         method: "POST",
@@ -19,8 +19,8 @@ const Signup = (props) => {
     console.log(json);
     if(json.success){
         localStorage.setItem('token', json.authtoken);
-        history.push("/");
         props.showAlert("Account created successfully","success");
+        history.push("/");
     }
     else{
         props.showAlert("Invalid credentials","danger");
@@ -45,10 +45,6 @@ const Signup = (props) => {
                 <div className="mb-3">
                     <label htmlFor="password" className="form-label">Password</label>
                     <input type="current-password" className="form-control" id="password" name = "password" onChange = {onChange} minLength = {5} required/>
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="cpassword" className="form-label">cPassword</label>
-                    <input type="current-password" className="form-control" id="cpassword" name = "cpassword" onChange = {onChange} minLength = {5} required/>
                 </div>
                 <button type="submit" className="btn btn-primary">Submit</button>
             </form>

@@ -17,8 +17,8 @@ const AddNote = (props) => {
         setNote({...note, [e.target.name]: e.target.value})
     }
   return (
-      <div className="container">
-        <h2  style = {{marginTop: "60px" }}> Add Note </h2>
+      <div className="container mt-4">
+        <h2> Add Note </h2>
         <form>
           <div className="mb-3">
             <label htmlFor="title" className="form-label">Title</label>
