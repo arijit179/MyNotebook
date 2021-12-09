@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useLocation, useHistory } from "react-router-dom";
-const Navbar = () => {
+const Navbar = (props) => {
   let history = useHistory();
   const handleLogout = ()=>{
     localStorage.removeItem('token');
@@ -47,7 +47,22 @@ const Navbar = () => {
             <Link className="btn btn-primary mx-1" to="/login" role="button">
               Login
             </Link>
-          </form>:<button className="btn btn-primary" onClick = {handleLogout}>Logout</button>}
+          </form>:<div className = "navbar-nav">
+          <div className="collapse navbar-collapse" id="navbarNavDarkDropdown">
+      <ul className="navbar-nav">
+        <li className="nav-item dropdown">
+          <Link className="nav-link dropdown-toggle mx-2" to="/" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            My profile
+          </Link>
+          <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+            <li className="dropdown-item">{props.user}</li>
+            <li className="dropdown-item">{props.user}</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+          <button className="btn btn-primary" onClick = {handleLogout}>Logout</button>
+          </div>}
         </div>
       </div>
     </nav>

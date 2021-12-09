@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom'
 const Login = (props) => {
     let history = useHistory();
     const [credentials, setCredentials] = useState({email: "" , password: ""})
+    
     const handleSubmit  = async (e)=>{
         e.preventDefault();
         const response = await fetch("http://localhost:5000/api/auth/login",
@@ -34,7 +35,7 @@ const Login = (props) => {
             <form onSubmit = {handleSubmit}>
                 <div className="mb-3">
                     <label htmlFor="email" className="form-label">Email address</label>
-                    <input type="email" className="form-control" id="email" name = "email" value = {credentials.email} onChange = {onChange} aria-describedby="emailHelp" />
+                    <input type="email" className="form-control" id="email" name = "email" value = {credentials.email} onChange = {onChange} aria-describedby="emailHelp"/>
                 </div>
                 <div className="mb-3">
                     <label htmlFor="password" className="form-label">Password</label>
