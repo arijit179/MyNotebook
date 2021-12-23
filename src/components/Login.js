@@ -34,10 +34,10 @@ const Login = (props) => {
         <>
         <link rel="stylesheet" to="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" />
 
-        <div className="min-h-screen flex flex-col items-center justify-center bg-gray-300">
+        <div className="flex flex-col items-center justify-center bg-gray-300" style={{"minHeight":"92vh"}}>
             <div className="flex flex-col bg-white shadow-md px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-md w-full max-w-md">
                 <div className="font-medium self-center text-xl sm:text-2xl uppercase text-gray-800">Login To Your Account</div>
-                <div className="mt-10">
+                <div className="mt-5">
                     <form onSubmit={handleSubmit}>
                         <div className="flex flex-col mb-6">
                             <label htmlFor="email" className="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">E-Mail Address:</label>

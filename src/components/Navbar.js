@@ -29,7 +29,7 @@ const Navbar = () => {
   let location = useLocation();
   React.useEffect(() => {}, [location]);
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-secondary">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
           iNotebook
@@ -61,10 +61,10 @@ const Navbar = () => {
             </li>
           </ul>
           {!localStorage.getItem('token') ? <form className="d-flex">
-            <Link className="btn btn-primary mx-1" to="/signup" role="button">
+            <Link className="btn btn-dark mx-1" to="/signup" role="button">
               Signup
             </Link>
-            <Link className="btn btn-primary mx-1" to="/login" role="button">
+            <Link className="btn btn-dark mx-1" to="/login" role="button">
               Login
             </Link>
           </form> : <div className="navbar-nav">
@@ -82,7 +82,7 @@ const Navbar = () => {
               </ul>
             </div> */}
             {/* <div className="container my-2 text-white">Welcome {credentials.name}</div> */}
-            <button className="btn btn-primary" onClick={handleLogout}>Logout</button>
+            <button className="btn btn-dark" onClick={handleLogout}>Logout</button>
           </div>}
         </div>
       </div>

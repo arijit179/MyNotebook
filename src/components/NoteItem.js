@@ -7,7 +7,7 @@ const NoteItem = (props) => {
   const { note , updateNote} = props;
   return (
     <div className = "col-md-3">
-      <div className="card my-3">
+      <div className="card my-3 border-secondary" style={{"borderRadius":"20px"}}>
         <div className="card-body">
           <div className = "d-flex align-items-center">
           <h6 className="card-title">{note.title}</h6>
