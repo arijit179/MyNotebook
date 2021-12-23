@@ -73,14 +73,16 @@ const Notes = (props) => {
                 </div>
             </div>
 
-            <div className="row my-3">
-                <h2>You Notes</h2>
+            <div className='container mt-4'>
+            <div className="row my-1">
+                <p className='font-bold self-center text-xl sm:text-2xl uppercase text-gray-800 my-1'>Your Notes</p>
                 <div className="container mx-2"> 
                 {notes.length===0 && 'No notes to display'}
                 </div>
                 {notes.map((note) => {
                     return <NoteItem key={note._id} updateNote={updateNote} showAlert = {props.showAlert} note={note} />
                 })}
+            </div>
             </div>
         </>
     )

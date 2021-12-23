@@ -25,9 +25,9 @@ export function App() {
     <>
       <NoteState>
         <Router>
-          <Navbar />
+        <Navbar />
           <Alert alert = {alert}/>
-          <div className = "container" style = {{maxWidth: "1200px"}}>
+          <div>
             <Switch>
               <Route exact path="/">
                 <Home showAlert = {showAlert}/>

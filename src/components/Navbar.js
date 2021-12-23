@@ -1,36 +1,33 @@
 import React from "react";
 import { Link, useLocation, useHistory } from "react-router-dom";
-import { useState, useEffect } from "react";
-const Navbar = (props) => {
+// import { useState } from "react";
+const Navbar = () => {
   let history = useHistory();
-  const [credentials, setCredentials] = useState({ name: "", email: "", password: "" })
-  const handlePage = async (e) => {
-    const response = await fetch("http://localhost:5000/api/auth/getuser",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "auth-token": localStorage.getItem('token')
-        },
-        body: JSON.stringify({ name: credentials.name, email: credentials.email }),
-      });
-    const json = await response.json();
-    // console.log(json);
-    setCredentials({ email: json.email, name: json.name });
-  }
-  useEffect(() => {
-    handlePage();
-    // eslint-disable-next-line
-  }, [])
-  // const onChange = (e)=>{
-  //     setCredentials({...credentials, [e.target.name]: e.target.value})
+  // const [credentials, setCredentials] = useState({ name: "", email: ""})
+  // const handlePage = async () => {
+  //     const response = await fetch("http://localhost:5000/api/auth/getuser",
+  //       {
+  //         method: "POST",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //           "auth-token": localStorage.getItem('token')
+  //         },
+  //         body: JSON.stringify({ name: credentials.name }),
+  //       });
+  //       const json = await response.json();
+  //       // console.log(json);
+  //       setCredentials({ name: json.name });
   // }
   const handleLogout = () => {
     localStorage.removeItem('token');
     history.push("/login");
   }
+//   if(localStorage.getItem('token')){
+//     handlePage();
+// }
+
   let location = useLocation();
-  React.useEffect(() => { }, [location]);
+  React.useEffect(() => {}, [location]);
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
@@ -84,7 +81,7 @@ const Navbar = (props) => {
                 </li>
               </ul>
             </div> */}
-            <div className="container my-2 text-white">Welcome {credentials.name}</div>
+            {/* <div className="container my-2 text-white">Welcome {credentials.name}</div> */}
             <button className="btn btn-primary" onClick={handleLogout}>Logout</button>
           </div>}
         </div>

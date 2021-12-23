@@ -18,7 +18,7 @@ const AddNote = (props) => {
     }
   return (
       <div className="container mt-4">
-        <h2> Add Note </h2>
+        <div className='font-bold self-center text-xl sm:text-2xl uppercase text-gray-800 my-4'>Add Notes</div>
         <form>
           <div className="mb-3">
             <label htmlFor="title" className="form-label">Title</label>

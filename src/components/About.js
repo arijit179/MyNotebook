@@ -1,8 +1,9 @@
+// import { Link } from "react-router-dom";
 
 const About = () => {
     return (
-        <div className = "mt-4">
-            <h2>About iNotebook</h2>
+        <div>
+            <h1>j</h1>
         </div>
     )
 }
