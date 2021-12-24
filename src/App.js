@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import About from "./components/About";
 import NoteState from "./context/notes/NoteState";
 import Alert from "./components/Alert";
+import CoverPage from "./components/CoverPage";
 
 
 export function App() {
@@ -29,7 +30,10 @@ export function App() {
           <Alert alert = {alert}/>
           <div>
             <Switch>
-              <Route exact path="/">
+            <Route exact path="/MyNotebook">
+                <CoverPage />
+              </Route>
+              <Route exact path="/notes">
                 <Home showAlert = {showAlert}/>
               </Route>
               <Route exact path="/about">

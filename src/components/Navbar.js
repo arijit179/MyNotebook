@@ -20,7 +20,7 @@ const Navbar = () => {
   // }
   const handleLogout = () => {
     localStorage.removeItem('token');
-    history.push("/login");
+    history.push("/MyNotebook");
   }
 //   if(localStorage.getItem('token')){
 //     handlePage();
@@ -31,8 +31,8 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-secondary">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
-          iNotebook
+        <Link className="navbar-brand" to="/notes">
+          MyNotebook
         </Link>
         <button
           className="navbar-toggler"
@@ -49,7 +49,7 @@ const Navbar = () => {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <Link
-                className={`nav-link ${location.pathname === "/" ? "active" : ""}`} aria-current="page" to="/">
+                className={`nav-link ${location.pathname === "/MyNotebook" ? "active" : ""}`} aria-current="page" to="/notes">
                 Home
               </Link>
             </li>
@@ -60,14 +60,7 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
-          {!localStorage.getItem('token') ? <form className="d-flex">
-            <Link className="btn btn-dark mx-1" to="/signup" role="button">
-              Signup
-            </Link>
-            <Link className="btn btn-dark mx-1" to="/login" role="button">
-              Login
-            </Link>
-          </form> : <div className="navbar-nav">
+          {!localStorage.getItem('token') ? '' : <div className="navbar-nav">
             {/* <div className="collapse navbar-collapse" id="navbarNavDarkDropdown">
               <ul className="navbar-nav">
                 <li className="nav-item dropdown">

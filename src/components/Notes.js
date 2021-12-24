@@ -13,7 +13,7 @@ const Notes = (props) => {
             getNotes();
         }
         else{
-            history.push("/login");
+            history.push("/MyNotebook");
         }
         // eslint-disable-next-line
     }, [])
