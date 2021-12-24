@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/login/static/css/main.9d7eda62.chunk.css",
-    "main.js": "/login/static/js/main.3e3c66a2.chunk.js",
-    "main.js.map": "/login/static/js/main.3e3c66a2.chunk.js.map",
-    "runtime-main.js": "/login/static/js/runtime-main.b8c125ad.js",
-    "runtime-main.js.map": "/login/static/js/runtime-main.b8c125ad.js.map",
-    "static/js/2.23390eaf.chunk.js": "/login/static/js/2.23390eaf.chunk.js",
-    "static/js/2.23390eaf.chunk.js.map": "/login/static/js/2.23390eaf.chunk.js.map",
-    "index.html": "/login/index.html",
-    "static/css/main.9d7eda62.chunk.css.map": "/login/static/css/main.9d7eda62.chunk.css.map",
-    "static/js/2.23390eaf.chunk.js.LICENSE.txt": "/login/static/js/2.23390eaf.chunk.js.LICENSE.txt"
+    "main.css": "/MyNotebook/static/css/main.9d7eda62.chunk.css",
+    "main.js": "/MyNotebook/static/js/main.b9bb1d24.chunk.js",
+    "main.js.map": "/MyNotebook/static/js/main.b9bb1d24.chunk.js.map",
+    "runtime-main.js": "/MyNotebook/static/js/runtime-main.5538e3d4.js",
+    "runtime-main.js.map": "/MyNotebook/static/js/runtime-main.5538e3d4.js.map",
+    "static/js/2.9a0e2587.chunk.js": "/MyNotebook/static/js/2.9a0e2587.chunk.js",
+    "static/js/2.9a0e2587.chunk.js.map": "/MyNotebook/static/js/2.9a0e2587.chunk.js.map",
+    "index.html": "/MyNotebook/index.html",
+    "static/css/main.9d7eda62.chunk.css.map": "/MyNotebook/static/css/main.9d7eda62.chunk.css.map",
+    "static/js/2.9a0e2587.chunk.js.LICENSE.txt": "/MyNotebook/static/js/2.9a0e2587.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.b8c125ad.js",
-    "static/js/2.23390eaf.chunk.js",
+    "static/js/runtime-main.5538e3d4.js",
+    "static/js/2.9a0e2587.chunk.js",
     "static/css/main.9d7eda62.chunk.css",
-    "static/js/main.3e3c66a2.chunk.js"
+    "static/js/main.b9bb1d24.chunk.js"
   ]
 }
