@@ -13,7 +13,7 @@ const NoteItem = (props) => {
           <h6 className="card-title">{note.title}</h6>
           <i className="far fa-edit mx-2" onClick = {()=>{updateNote(note)}}></i>
           <i className="far fa-trash-alt" onClick = {()=>{deleteNote(note._id);props.showAlert("Deleted note successfully","success");}}></i>
-          <i className="fa fa-eye mx-2" aria-hidden="true"></i>
+          {/* <i className="fa fa-eye mx-2" aria-hidden="true"></i> */}
           </div>
           <p className="card-text">{note.description ? note.description.slice(0,40) : ""}</p>
         </div>
