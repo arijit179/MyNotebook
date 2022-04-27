@@ -8,7 +8,6 @@ const Notes = (props) => {
     let history = useHistory();
     const context = useContext(noteContext);
     const { notes, getNotes, editNote } = context;
-    useEffect(() => {
         if(localStorage.getItem('token')){
             getNotes();
         }
@@ -16,7 +15,6 @@ const Notes = (props) => {
             history.push("/MyNotebook");
         }
         // eslint-disable-next-line
-    }, [])
     const ref = useRef(null)
     const refClose = useRef(null)
     const [note, setNote] = useState({id: "", etitle: "", edescription: "", etag: ""})

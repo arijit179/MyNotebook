@@ -15,7 +15,7 @@ const NoteItem = (props) => {
           <i className="far fa-trash-alt" onClick = {()=>{deleteNote(note._id);props.showAlert("Deleted note successfully","success");}}></i>
           {/* <i className="fa fa-eye mx-2" aria-hidden="true"></i> */}
           </div>
-          <p className="card-text">{note.description ? note.description.slice(0,40) : ""}</p>
+          <p className="card-text">{note.description ? note.description.slice(0,80) : ""}</p>
         </div>
       </div>
     </div>
