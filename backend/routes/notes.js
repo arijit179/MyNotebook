@@ -7,7 +7,8 @@ const Note = require('../models/Note')
 // Route: 1 Get All the Notes using: GET "/api/notes/fetchallnotes" . Login required
 router.get('/fetchallnotes',fetchuser, async(req,res)=>{
         const notes = await Note.find({user: req.user.id});
-        res.json(notes)
+        // if(!notes) return res.status(400);
+        return res.status(200).json(notes)
 })
 
 // Route: 2 Add a note using: GET "/api/notes/addnote" . Login required
@@ -29,7 +30,7 @@ router.post('/addnote', fetchuser ,[
           res.json(savedNote);
     } catch (error) {
       console.log(error.message);
-      res.status(500).send("Internal Server error");
+      return res.status(500).send("Internal Server error");
     }
 })
 
@@ -53,7 +54,7 @@ router.put('/updatenote/:id', fetchuser, async (req,res)=>{
     res.json({note});  
   } catch (error) {
     console.log(error.message);
-    res.status(500).send("Internal Server error");
+    return res.status(500).send("Internal Server error");
   }
   })
   
@@ -71,7 +72,7 @@ router.delete('/deletenote/:id', fetchuser, async (req,res)=>{
   res.json({"Success":"Note has been deleted" , note:note});
 } catch (error) {
   console.log(error.message);
-  res.status(500).send("Internal Server error");
+  return res.status(500).send("Internal Server error");
 }
 }) 
 module.exports = router;

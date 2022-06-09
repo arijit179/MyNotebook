@@ -16,8 +16,13 @@ const NoteState = (props) => {
         },
       }
     );
+    if(response.status===200){
     const json = await response.json();
     setNotes(json);
+    }
+    else{
+      setNotes("");
+    }
   };
   // Add a Note
   const addNote = async(title, description, tag) => {
@@ -91,18 +96,3 @@ const NoteState = (props) => {
   );
 };
 export default NoteState;
-
-// const NoteState = (props)=>{
-//     const s1 = {
-//         "name": "Harry",
-//         "class": "5b"
-//     }
-//     const [state, setState] = useState(s1);
-//     const update = ()=>{
-//         setTimeout(() => {
-//             setState({
-//                 "name": "Larry",
-//                 "class": "10b"
-//             })
-//         }, 5000);
-//     }
